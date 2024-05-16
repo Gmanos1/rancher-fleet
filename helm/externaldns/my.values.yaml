@@ -15,7 +15,7 @@ txtPrefix: "rke2"
 
 provider: pdns
 pdns:
-  apiUrl: "ns1.chmurka"
+  apiUrl: "http://ns1.chmurka"
   apiPort: "8081"
   apiKey: "8wcjznux0bj8ljarlsfauc9tlr0cthis"
 
