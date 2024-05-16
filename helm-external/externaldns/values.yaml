@@ -1,0 +1,33 @@
+replicaCount: 3
+sources:
+  - service
+  - ingress
+
+serviceTypeFilter:
+  - LoadBalancer
+
+triggerLoopOnEvent: true
+interval: "1m"
+policy: sync
+registry: "txt"
+txtOwnerId: "rke2"
+txtPrefix: "rke2"
+
+provider: pdns
+pdns:
+  apiUrl:
+  apiPort:
+  apiKey: 
+
+manageRecordTypeFilters:
+  - A
+
+extraArgs:
+  txt-wildcard-replacement: wildcard
+  pdns-skip-tls-verify: ""
+
+logFormat: json
+logLevel: info
+
+metrics:
+  enabled: true
