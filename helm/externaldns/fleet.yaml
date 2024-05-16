@@ -1,0 +1,9 @@
+name: rancher-fleet-externaldns
+defaultNamespace: externaldns
+targetCustomizations:
+- clusterName: local
+  helm:
+    valuesFiles:
+    - values.yaml
+    - my.values.yaml
+
