@@ -1,13 +1,9 @@
+name: rancher-fleet-externaldns
 defaultNamespace: externaldns
 helm:
   repo: oci://registry-1.docker.io/bitnamicharts
   chart: external-dns
+  version: 7.3.0
   releaseName: externaldns
   valuesFiles:
   - values.yaml
-
-targetCustomizations:
-  - clusterGroup: default
-    helm:
-      version: 7.3.0
-
